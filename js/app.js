@@ -3,6 +3,8 @@ function setOtherCountries() {
 
     var cookieCovid = checkCookie();
 
+    console.log(cookieCovid);
+
     if(cookieCovid !== false) {
         appendData(cookieCovid);
     }
@@ -22,7 +24,7 @@ function setPolishData() {
     var cookieCovid = checkCookie('arcgisPolishData');
 
     if(cookieCovid !== false) {
-        appendData(cookieCovid);
+        //appendData(cookieCovid);
     }
 
     $.get(url, function (data) {
@@ -44,12 +46,12 @@ function appendData(covidData) {
 
         $('.otherCountries').append(
             '<tr>' +
-            '   <td>'+country+'</td>' +
-            '   <td>'+infected+'</td>' +
-            '   <td>'+curedPercentage+' %</td>' +
-            '   <td>'+cured+'</td>' +
-            '   <td>'+deathsPercentage+' %</td>' +
-            '   <td>'+deaths+'</td>' +
+            '<td>'+country+'</td>' +
+            '<td>'+infected+'</td>' +
+            '<td>'+curedPercentage+' %</td>' +
+            '<td>'+cured+'</td>' +
+            '<td>'+deathsPercentage+' %</td>' +
+            '<td>'+deaths+'</td>' +
             '</tr>'
         );
     });
@@ -74,19 +76,33 @@ function setCookie(covidData, cookieName = 'arcgisData') {
     var minutes = 10;
     date.setTime(date.getTime() + (minutes * 60 * 1000));
 
-    $.cookie(cookieName, covidData, {expires: date});
+    $.cookie(cookieName, JSON.stringify(covidData), {expires: date});
 }
 
 function checkCookie(cookieName = 'arcgisData') {
     var cookie = $.cookie(cookieName);
 
     if(cookie !== undefined) {
-        return cookie;
+        return JSON.parse(cookie);
     }
     return false;
 }
 
+function checkVisited() {
+    var cookie = $.cookie('visited');
+
+    if(cookie === undefined) {
+        $('.modal-content').show();
+    }
+}
+
+var setVisited = function () {
+    $.cookie('visited', 'yes', {expires: 180});
+    $('.modal-content').hide();
+}
+
 $(document).ready(function () {
+    checkVisited();
     setPolishData();
     setOtherCountries();
     setCookie();

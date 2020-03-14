@@ -14,3 +14,11 @@ h1, h2 {
     border: #363636 solid 1px;
     color: #ff0a00;
 }
+
+.modal-content {
+    position: fixed;
+    bottom: 5%;
+    left: 25%;
+    display: none;
+    z-index: 1;
+}
