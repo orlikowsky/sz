@@ -1,0 +1,16 @@
+body {
+    background: #000000;
+    color: #FFF;
+    font-family: "Nunito Sans",sans-serif;
+}
+
+h1, h2 {
+    color: #FFF;
+}
+
+
+.infected {
+    background: #222222;
+    border: #363636 solid 1px;
+    color: #ff0a00;
+}
