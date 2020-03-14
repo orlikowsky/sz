@@ -76,8 +76,6 @@ function setCookiePolish(covidData) {
     var minutes = 10;
     date.setTime(date.getTime() + (minutes * 60 * 1000));
 
-    console.log(JSON.stringify(covidData));
-
     $.cookie('arcgisPolishData', JSON.stringify(covidData), {expires: date});
 }
 
