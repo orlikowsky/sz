@@ -16,6 +16,23 @@ function setOtherCountries() {
 
 }
 
+function setPolishData() {
+    var url = 'https://services1.arcgis.com/YmCK8KfESHdxUQgm/ArcGIS/rest/services/KoronawirusPolska_czas/FeatureServer/0/query?where=Potwierdzone+%3E+0&objectIds=&time=&resultType=none&outFields=Potwierdzone%2CWyleczone%2CSmiertelne&returnIdsOnly=false&returnUniqueIdsOnly=false&returnCountOnly=false&returnDistinctValues=false&cacheHint=false&orderByFields=Potwierdzone+desc&groupByFieldsForStatistics=&outStatistics=&having=&resultOffset=&resultRecordCount=1&sqlFormat=none&f=pgeojson&token=';
+
+    var cookieCovid = checkCookie('arcgisPolishData');
+
+    if(cookieCovid !== false) {
+        appendData(cookieCovid);
+    }
+
+    $.get(url, function (data) {
+        var covidPolishData = JSON.parse(data);
+
+        setCookie(covidPolishData, 'arcgisPolishData')
+        appendPolishData(covidPolishData);
+    });
+}
+
 function appendData(covidData) {
     covidData.features.forEach(function (value, index, array) {
         let country = value.properties.Country_Region;
@@ -52,28 +69,16 @@ function appendPolishData(covidPolishData) {
     $('.curedPercentage').append(curedPercentage+ ' %');
 }
 
-function setPolishData() {
-    var url = 'https://services1.arcgis.com/YmCK8KfESHdxUQgm/ArcGIS/rest/services/KoronawirusPolska_czas/FeatureServer/0/query?where=Potwierdzone+%3E+0&objectIds=&time=&resultType=none&outFields=Potwierdzone%2CWyleczone%2CSmiertelne&returnIdsOnly=false&returnUniqueIdsOnly=false&returnCountOnly=false&returnDistinctValues=false&cacheHint=false&orderByFields=Potwierdzone+desc&groupByFieldsForStatistics=&outStatistics=&having=&resultOffset=&resultRecordCount=1&sqlFormat=none&f=pgeojson&token=';
-
-    $.get(url, function (data) {
-        var covidPolishData = JSON.parse(data);
-
-        appendPolishData(covidPolishData);
-    });
-}
-
-function setCookie(covidData) {
+function setCookie(covidData, cookieName = 'arcgisData') {
     var date = new Date();
     var minutes = 10;
     date.setTime(date.getTime() + (minutes * 60 * 1000));
 
-    console.log(covidData);
-
-    $.cookie('arcgisData', covidData, {expires: date});
+    $.cookie(cookieName, covidData, {expires: date});
 }
 
-function checkCookie() {
-    var cookie = $.cookie('arcgisData');
+function checkCookie(cookieName = 'arcgisData') {
+    var cookie = $.cookie(cookieName);
 
     if(cookie !== undefined) {
         return cookie;
