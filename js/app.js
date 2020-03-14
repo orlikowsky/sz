@@ -64,13 +64,6 @@ function appendPolishData(covidPolishData) {
     $('.curedPercentage').append(curedPercentage+ ' %');
 }
 
-function prepareCookieData(covidData) {
-
-    let array = [];
-    covidData.forEach(function (value, index, array) {
-    })
-}
-
 function setCookiePolish(covidData) {
     var date = new Date();
     var minutes = 10;
