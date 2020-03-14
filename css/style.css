@@ -1,24 +1,64 @@
 body {
-    background: #000000;
-    color: #FFF;
-    font-family: "Nunito Sans",sans-serif;
+    background: #1b262c;
+    color: #0f4c75;
+    font-family: 'Roboto', sans-serif;
 }
 
-h1, h2 {
-    color: #FFF;
+html, body {
+    height: 100%;
 }
 
-
-.infected {
-    background: #222222;
-    border: #363636 solid 1px;
-    color: #ff0a00;
-}
-
-.modal-content {
+.main-head{
+    color: #bbe1fa;
     position: fixed;
-    bottom: 5%;
-    left: 25%;
-    display: none;
-    z-index: 1;
+    background: #1b262c;
+    z-index: 9999;
+}
+
+.main-head::after{
+    content: '';
+    width: 62px;
+    height: 2000px;
+    background: #e84e4f;
+    display: block;
+    position: absolute;
+}
+
+.main-head::before{
+    content: '';
+    width: 62px;
+    height: 160px;
+    background: #fff;
+    display: block;
+    position: absolute;
+    top: -112px;
+}
+
+.number{
+    color: #bbe1fa;
+    font-size: 3em;
+}
+
+.menu{
+    position:fixed;
+    z-index: 999999;
+    top: 50%;
+}
+
+a{
+    color:white;
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:none;
+    color: white;
+}
+
+.align-self-end{
+    color: #bbe1fa;
+}
+
+.table{
+    color: white;
 }

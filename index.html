@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
@@ -13,63 +14,130 @@
 
 </head>
 <body>
-    <div class="container-fluuid">
-        <div class="row">
-        <div class="col-12 flex-align-center">
-            <h1>Skuteczność polskiej Służby Zdrowia w walce z Korona Wirusem</h1>
-            <h2>Polska</h2>
-        </div>
-        <div class="col-4"></div>
-        <div class="col-4">
-            <div class="infected">
-                <h2>Liczba zainfekowanych</h2>
+    <div class="main-head display-1 font-weight-bold p-5 w-100">
+        Polska Służba Zdrowia w walce z koronawirusem
+    </div>
+    <div class="menu d-flex flex-column ml-5 pl-4">
+        <a class="mb-1 menu-bullet" data-step="1" href="">◉</a>
+        <a class="mb-1 menu-bullet" data-step="2" href="">◉</a>
+        <a class="mb-1 menu-bullet" data-step="3" href="">◉</a>
+        <a class="mb-1 menu-bullet" data-step="4" href="">◉</a>
+    </div>
+    <div class="container-fluid d-flex align-items-stretch fill h-100 step justify-content-end" id="step1">      
+        <div class="row w-100">
+            <div class="col-12 d-flex justify-content-end flex-column text-right pl-5">
+                <div class="number p-5 align-self-end">
+                    <div class="desc display-3">
+                        Liczba zainfekowanych:
+                    </div>
+                    <div class="display-1" id="infected">
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-4"></div>
-        <div class="col-6">
-            <h2>Procent wyleczonych</h2>
-            <div class="curedPercentage"></div>
-            <h2>Liczba wyleczonych</h2>
-            <div class="cured"></div>
+    </div>
+    <div class="container-fluid d-flex align-items-stretch fill h-100 step" id="step2">
+        <div class="row w-100">
+            <div class="col-12 d-flex flex-column pl-5">
+                <div class="number p-5 align-self-start ml-5">
+                    <div class="desc display-3">
+                        Liczba wyleczonych
+                    </div>
+                    <div class="display-1" id="cured">
+                    </div>
+                </div>
+                <div class="p-5 align-self-end">
+                    <div class="desc display-3">
+                        Procent wyleczonych
+                    </div>
+                    <div class="display-1" id="curedPercentage">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-6">
-            <h2>Procent zgonów</h2>
-            <div class="deathsPercentage"></div>
-            <h2>Liczba zgonów</h2>
-            <div class="deaths"></div>
+    </div>
+    <div class="container-fluid d-flex align-items-stretch fill h-100 step" id="step3">
+        <div class="row w-100">
+            <div class="col-12 d-flex flex-column pl-5">
+                <div class="number p-5 align-self-start ml-5">
+                    <div class="desc display-3">
+                        Liczba zgonów
+                    </div>
+                    <div class="display-1" id="deaths">
+                    </div>
+                </div>
+                <div class="p-5 align-self-end">
+                    <div class="desc display-3">
+                        Procent zgonów
+                    </div>
+                    <div class="display-1" id="deathsPercentage">
+                    </div>
+                </div>
+            </div>
         </div>
-        </div>
-        <div class="col-12">
-            <h2>Inne kraje</h2>
-            <table class="otherCountries">
-                <tr>
-                    <th>Kraj</th>
-                    <th>Liczba zainfekowanych</th>
-                    <th>Procent wyleczonych</th>
-                    <th>Liczba wyleczonych</th>
-                    <th>Procent zgonów</th>
-                    <th>Liczba zgonów</th>
-                </tr>
-            </table>
-
+    </div>
+    <div class="container-fluid d-flex align-items-stretch fill h-100 step" id="step4">
+        <div class="row pl-5">
+            <div class="col-12 kraje pl-5 ml-5">
+                <h2>Inne kraje</h2>
+                <table class="otherCountries table">
+                    <tr>
+                        <th>Kraj</th>
+                        <th>Liczba zainfekowanych</th>
+                        <th>Procent wyleczonych</th>
+                        <th>Liczba wyleczonych</th>
+                        <th>Procent zgonów</th>
+                        <th>Liczba zgonów</th>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
 
-    <div class="col-6 modal-content">
-        <p>
-            Nasza strona internetowa używa plików cookies (tzw. ciasteczka) w celach statystycznych, reklamowych oraz
-            funkcjonalnych. Dzięki nim możemy indywidualnie dostosować stronę do twoich potrzeb. Każdy może zaakceptować
-            pliki cookies albo ma możliwość wyłączenia ich w przeglądarce, dzięki czemu nie będą zbierane żadne
-            informacje
-        </p>
-        <a href="#" class="btn-sm btn-warning" onclick="setVisited()">OK</a>
-    </div>
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <div class="infected">
+                    <h2>Liczba zainfekowanych</h2>
+                </div>
+            </div>
+            <div class="col-4"></div>
+            <div class="col-6">
+                <h2>Procent wyleczonych</h2>
+                <div class="curedPercentage"></div>
+                <h2>Liczba wyleczonych</h2>
+                <div class="cured"></div>
+            </div>
+            <div class="col-6">
+                <h2>Procent zgonów</h2>
+                <div class="deathsPercentage"></div>
+                <h2>Liczba zgonów</h2>
+                <div class="deaths"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h2>Inne kraje</h2>
+                <table class="otherCountries">
+                    <tr>
+                        <th>Kraj</th>
+                        <th>Liczba zainfekowanych</th>
+                        <th>Procent wyleczonych</th>
+                        <th>Liczba wyleczonych</th>
+                        <th>Procent zgonów</th>
+                        <th>Liczba zgonów</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div> -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/countup@1.8.2/dist/countUp.min.js"></script>
 
 </body>
 </html>
