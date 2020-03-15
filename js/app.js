@@ -4,7 +4,6 @@ function setOtherCountries() {
 
     $.get(urlOtherCountries, function (data) {
         let covidData = JSON.parse(data);
-
         appendData(covidData);
     });
 
@@ -16,7 +15,6 @@ function setPolishData() {
     $.get(url, function (data) {
         var covidPolishData = JSON.parse(data);
 
-        setCookiePolish(covidPolishData);
         appendPolishData(covidPolishData);
     });
 }
