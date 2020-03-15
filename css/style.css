@@ -41,6 +41,7 @@ body {
 
 .deaths {
     color: #ff2400;
+    font-weight: bold;
     font-size: 40px;
 }
 
