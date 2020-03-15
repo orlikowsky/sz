@@ -11,6 +11,12 @@
 
     <title>Służba Zdrowia - Korona Wirus</title>
 
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.1.0/tablesort.min.js'></script>
+
+    <!-- Include sort types you need -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.1.0/sorts/tablesort.number.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.1.0/sorts/tablesort.date.min.js'></script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160643537-1"></script>
     <script>
@@ -52,15 +58,20 @@
             </div>
             <div class="col-12 borderLeft">
                 <h2>Inne kraje</h2>
-                <table class="otherCountries table">
-                    <tr>
-                        <th>Kraj</th>
-                        <th>Liczba zainfekowanych</th>
-                        <th>Procent wyleczonych</th>
-                        <th>Liczba wyleczonych</th>
-                        <th>Procent zgonów</th>
-                        <th>Liczba zgonów</th>
-                    </tr>
+                <table id="covidTable" class="table">
+                    <thead>
+                        <tr>
+                            <th><a href="#">Kraj</a></th>
+                            <th><a href="#">Liczba zainfekowanych</a></th>
+                            <th><a href="#">Procent wyleczonych</a></th>
+                            <th><a href="#">Liczba wyleczonych</a></th>
+                            <th><a href="#">Procent zgonów</a></th>
+                            <th><a href="#">Liczba zgonów</a></th>
+                        </tr>
+                    </thead>
+                    <tbody class="otherCountries">
+
+                    </tbody>
                 </table>
             </div>
             <div class="container-fluuid">

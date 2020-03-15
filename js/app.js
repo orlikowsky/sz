@@ -88,6 +88,8 @@ var setVisited = function () {
     $('.modal-content').hide();
 }
 
+new Tablesort(document.getElementById('covidTable'));
+
 $(document).ready(function () {
     checkVisited();
     setPolishData();
