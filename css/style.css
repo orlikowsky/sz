@@ -1,18 +1,71 @@
 body {
-    background: #000000;
-    color: #FFF;
-    font-family: "Nunito Sans",sans-serif;
+    background: #1b262c;
+    color: #0f4c75;
+    font-family: 'Roboto', sans-serif;
 }
 
-h1, h2 {
-    color: #FFF;
+.borderLeft {
+    border-left: #e84e4f solid 80px;
 }
 
+.borderLeftWhite {
+    border-left: #fff solid 80px;
+}
+
+h1 {
+    color: #bbe1fa;
+    font-size: 50px;
+}
+
+h2 {
+    color: #bbe1fa;
+    font-size: 40px;
+}
+
+.borderBottom {
+    border-bottom: 1px solid;
+}
+
+h3 {
+    color: #bbe1fa;
+    font-size: 30px;
+}
+
+h4 {
+    color: #bbe1fa;
+    font-size: 20px;
+}
+
+.table{
+    color: white;
+}
+
+.curedPercentage {
+    color: #3aff00;
+    font-weight: bold;
+    font-size: 80px;
+}
+
+.deathsPercentage {
+    color: #ff2400;
+    font-weight: bold;
+    font-size: 80px;
+}
 
 .infected {
-    background: #222222;
-    border: #363636 solid 1px;
-    color: #ff0a00;
+    font-weight: bold;
+    font-size: 80px;
+}
+
+.cured {
+    color: #3aff00;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.deaths {
+    color: #ff2400;
+    font-size: 40px;
 }
 
 .modal-content {
