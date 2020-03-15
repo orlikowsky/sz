@@ -10,7 +10,7 @@ function setOtherCountries() {
 }
 
 function setPolishData() {
-    var url = 'https://services9.arcgis.com/N9p5hsImWXAccRNI/ArcGIS/rest/services/Z7biAeD8PAkqgmWhxG2A/FeatureServer/2//query?where=Country_Region+%3D+%27Poland%27&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&resultType=none&distance=0.0&units=esriSRUnit_Meter&returnGeodetic=false&outFields=Confirmed%2CDeaths%2CRecovered&returnGeometry=true&featureEncoding=esriDefault&multipatchOption=xyFootprint&maxAllowableOffset=&geometryPrecision=&outSR=&datumTransformation=&applyVCSProjection=false&returnIdsOnly=false&returnUniqueIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&returnQueryGeometry=false&returnDistinctValues=false&cacheHint=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&having=&resultOffset=&resultRecordCount=&returnZ=false&returnM=false&returnExceededLimitFeatures=true&quantizationParameters=&sqlFormat=none&f=pgeojson&token=';
+    var url = 'https://services1.arcgis.com/YmCK8KfESHdxUQgm/ArcGIS/rest/services/KoronawirusPolska_czas/FeatureServer/0/query?where=Potwierdzone+%3E+0&objectIds=&time=&resultType=none&outFields=Potwierdzone%2CWyleczone%2CSmiertelne&returnIdsOnly=false&returnUniqueIdsOnly=false&returnCountOnly=false&returnDistinctValues=false&cacheHint=false&orderByFields=Potwierdzone+desc&groupByFieldsForStatistics=&outStatistics=&having=&resultOffset=&resultRecordCount=1&sqlFormat=none&f=pgeojson&token=';
 
     $.get(url, function (data) {
         var covidPolishData = JSON.parse(data);
@@ -42,9 +42,9 @@ function appendData(covidData) {
 }
 
 function appendPolishData(covidPolishData) {
-    let infected = covidPolishData.features[0].properties.Confirmed;
-    let deaths = covidPolishData.features[0].properties.Deaths;
-    let cured = covidPolishData.features[0].properties.Recovered;
+    let infected = covidPolishData.features[0].properties.Potwierdzone;
+    let deaths = covidPolishData.features[0].properties.Smiertelne;
+    let cured = covidPolishData.features[0].properties.Wyleczone;
     let curedPercentage = parseFloat(cured*100/infected).toFixed(2);
     let deathsPercentage = parseFloat(deaths*100/infected).toFixed(2);
 
