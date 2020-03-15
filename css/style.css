@@ -99,6 +99,12 @@ h4 {
     .infected {
         font-size: 40px;
     }
+    .borderLeft {
+        border-left: #e84e4f solid 40px;
+    }
+    .borderLeftWhite {
+        border-left: #fff solid 40px;
+    }
 }
 @media screen and  (min-width: 992px) and (max-width: 1366px) {
     h1 {
@@ -121,6 +127,12 @@ h4 {
     }
     .infected {
         font-size: 50px;
+    }
+    .borderLeft {
+        border-left: #e84e4f solid 60px;
+    }
+    .borderLeftWhite {
+        border-left: #fff solid 60px;
     }
 }
 @media screen and  (min-width: 1366px) and (max-width: 4920px) {
@@ -160,6 +172,12 @@ h4 {
     .infected {
         font-size: 40px;
     }
+    .borderLeft {
+        border-left: #e84e4f solid 60px;
+    }
+    .borderLeftWhite {
+        border-left: #fff solid 60px;
+    }
 }
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
@@ -183,6 +201,12 @@ h4 {
     }
     .infected {
         font-size: 40px;
+    }
+    .borderLeft {
+        border-left: #e84e4f solid 60px;
+    }
+    .borderLeftWhite {
+        border-left: #fff solid 60px;
     }
 }
 
@@ -208,6 +232,12 @@ h4 {
     .infected {
         font-size: 27px;
     }
+    .borderLeft {
+        border-left: #e84e4f solid 40px;
+    }
+    .borderLeftWhite {
+        border-left: #fff solid 40px;
+    }
 }
 
 @media all and (max-width: 480px) {
@@ -231,5 +261,11 @@ h4 {
     }
     .infected {
         font-size: 25px;
+    }
+    .borderLeft {
+        border-left: #e84e4f solid 35px;
+    }
+    .borderLeftWhite {
+        border-left: #fff solid 35px;
     }
 }
