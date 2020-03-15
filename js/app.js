@@ -28,6 +28,10 @@ function appendData(covidData) {
         let curedPercentage = parseFloat(cured*100/infected).toFixed(2);
         let deathsPercentage = parseFloat(deaths*100/infected).toFixed(2);
 
+        if (country === 'Poland') {
+            return;
+        }
+
         $('.otherCountries').append(
             '<tr>' +
             '<td>'+country+'</td>' +
