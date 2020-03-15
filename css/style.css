@@ -12,30 +12,6 @@ body {
     border-left: #fff solid 80px;
 }
 
-h1 {
-    color: #bbe1fa;
-    font-size: 50px;
-}
-
-h2 {
-    color: #bbe1fa;
-    font-size: 40px;
-}
-
-.borderBottom {
-    border-bottom: 1px solid;
-}
-
-h3 {
-    color: #bbe1fa;
-    font-size: 30px;
-}
-
-h4 {
-    color: #bbe1fa;
-    font-size: 20px;
-}
-
 .table{
     color: white;
 }
@@ -74,4 +50,155 @@ h4 {
     left: 25%;
     display: none;
     z-index: 1;
+}
+
+h1 {
+    color: #bbe1fa;
+    font-size: 50px;
+}
+
+h2 {
+    color: #bbe1fa;
+    font-size: 40px;
+}
+
+.borderBottom {
+    border-bottom: 1px solid;
+}
+
+h3 {
+    color: #bbe1fa;
+    font-size: 30px;
+}
+
+h4 {
+    color: #bbe1fa;
+    font-size: 20px;
+}
+
+@media screen and  (min-width: 768px) and (max-width: 992px) {
+    h1 {
+        font-size: 25px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    .deathsPercentage {
+        font-size: 40px;
+    }
+    .curedPercentage {
+        font-size: 40px;
+    }
+    .infected {
+        font-size: 40px;
+    }
+}
+@media screen and  (min-width: 992px) and (max-width: 1366px) {
+    h1 {
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 25px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    .deathsPercentage {
+        font-size: 50px;
+    }
+    .curedPercentage {
+        font-size: 50px;
+    }
+    .infected {
+        font-size: 50px;
+    }
+}
+@media screen and  (min-width: 1366px) and (max-width: 4920px) {
+    h1 {
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 25px;
+    }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+    h1 {
+        font-size: 35px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 25px;
+    }
+    .deathsPercentage {
+        font-size: 40px;
+    }
+    .curedPercentage {
+        font-size: 40px;
+    }
+    .infected {
+        font-size: 40px;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    h1 {
+        font-size: 25px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    .deathsPercentage {
+        font-size: 40px;
+    }
+    .curedPercentage {
+        font-size: 40px;
+    }
+    .infected {
+        font-size: 40px;
+    }
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+    h1 {
+        font-size: 25px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    .deathsPercentage {
+        font-size: 27px;
+    }
+    .curedPercentage {
+        font-size: 27px;
+    }
+    .infected {
+        font-size: 27px;
+    }
+}
+
+@media all and (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    h3 {
+        font-size: 15px;
+    }
 }
