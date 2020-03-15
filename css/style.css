@@ -201,4 +201,13 @@ h4 {
     h3 {
         font-size: 15px;
     }
+    .deathsPercentage {
+        font-size: 25px;
+    }
+    .curedPercentage {
+        font-size: 25px;
+    }
+    .infected {
+        font-size: 25px;
+    }
 }
