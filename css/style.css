@@ -47,7 +47,7 @@ body {
 
 .modal-content {
     position: fixed;
-    bottom: 10px;
+    bottom: 5%;
     left: 10px;
     display: none;
     z-index: 1;
