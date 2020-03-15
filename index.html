@@ -11,6 +11,16 @@
 
     <title>Służba Zdrowia - Korona Wirus</title>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160643537-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-160643537-1');
+    </script>
+
 </head>
 <body>
     <div class="container-fluuid">
@@ -52,6 +62,11 @@
                         <th>Liczba zgonów</th>
                     </tr>
                 </table>
+            </div>
+            <div class="container-fluuid">
+                <div class="col-12 borderLeft">
+                    Żródło danych - <a href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">Johns Hopkins CSSE</a>
+                </div>
             </div>
         </div>
     </div>
