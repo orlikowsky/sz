@@ -42,6 +42,38 @@ function appendData(covidData) {
             '<td>'+deaths+'</td>' +
             '</tr>'
         );
+
+        if (country === 'China') {
+            $('.china').append('<td>Chiny</td>');
+            $('.china').append('<td>'+infected+'</td>');
+            $('.china').append('<td class="tdCured">'+curedPercentage+' %</td>');
+            $('.china').append('<td>'+cured+'</td>');
+            $('.china').append('<td class="tdDeaths">'+deaths+'</td>');
+        }
+
+        if (country === 'Germany') {
+            $('.germany').append('<td>Niemcy</td>');
+            $('.germany').append('<td>'+infected+'</td>');
+            $('.germany').append('<td class="tdCured">'+curedPercentage+' %</td>');
+            $('.germany').append('<td>'+cured+'</td>');
+            $('.germany').append('<td class="tdDeaths">'+deaths+'</td>');
+        }
+
+        if (country === 'Italy') {
+            $('.italy').append('<td>Włochy</td>');
+            $('.italy').append('<td>'+infected+'</td>');
+            $('.italy').append('<td class="tdCured">'+curedPercentage+' %</td>');
+            $('.italy').append('<td>'+cured+'</td>');
+            $('.italy').append('<td class="tdDeaths">'+deaths+'</td>');
+        }
+
+        if (country === 'United Kingdom') {
+            $('.uk').append('<td>Wielka Brytania</td>');
+            $('.uk').append('<td>'+infected+'</td>');
+            $('.uk').append('<td class="tdCured">'+curedPercentage+' %</td>');
+            $('.uk').append('<td>'+cured+'</td>');
+            $('.uk').append('<td class="tdDeaths">'+deaths+'</td>');
+        }
     });
 }
 
@@ -57,6 +89,14 @@ function appendPolishData(covidPolishData) {
     $('.deathsPercentage').append(deathsPercentage+' %');
     $('.cured').append(cured);
     $('.curedPercentage').append(curedPercentage+ ' %');
+
+    $('.poland').append('<td>Polska</td>');
+    $('.poland').append('<td>'+infected+'</td>');
+    $('.poland').append('<td class="tdCured">'+curedPercentage+'</td>');
+    $('.poland').append('<td>'+cured+'</td>');
+    $('.poland').append('<td class="tdDeaths">'+deaths+'</td>');
+
+    createCanvas();
 }
 
 function setCookiePolish(covidData) {
@@ -88,6 +128,20 @@ var setVisited = function () {
     $('.modal-content').hide();
 }
 
+function createCanvas() {
+    var element = $('.tableForCanvas'); // global variable
+    var getCanvas; // global variable
+
+    html2canvas(element, {
+        onrendered: function (canvas) {
+            $(".previewImage").append(canvas);
+            getCanvas = canvas;
+        }
+    });
+
+
+}
+
 new Tablesort(document.getElementById('covidTable'));
 
 $(document).ready(function () {
@@ -95,3 +149,4 @@ $(document).ready(function () {
     setPolishData();
     setOtherCountries();
 });
+

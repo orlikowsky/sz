@@ -63,10 +63,6 @@ h2 {
     font-size: 40px;
 }
 
-.borderBottom {
-    border-bottom: 1px solid;
-}
-
 h3 {
     color: #bbe1fa;
     font-size: 30px;
@@ -75,6 +71,24 @@ h3 {
 h4 {
     color: #bbe1fa;
     font-size: 20px;
+}
+
+.borderBottom {
+    border-bottom: 1px solid;
+}
+
+.tdCured {
+    color: #3aff00;
+}
+
+.tdDeaths {
+    color: #ff2400;
+}
+
+.tableForCanvas {
+    background: #1b262c;
+    width: 600px;
+    height: 314px;
 }
 
 @media screen and  (min-width: 768px) and (max-width: 992px) {
