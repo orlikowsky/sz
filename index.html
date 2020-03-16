@@ -101,37 +101,27 @@
         <a href="#" class="btn-sm btn-warning" onclick="setVisited()">OK</a>
     </div>
 
-    <div class="tableForCanvas">
-        <h4>SLUZBAZDROWIA.INFO - KORONAWIRUS COVID-19</h4>
-        <table class="table">
-            <tr>
-                <th>Kraj</th>
-                <th>Liczba zainfekowanych</th>
-                <th>Procent wyleczonych</th>
-                <th>Liczba wyleczonych</th>
-                <th>Liczba zgonów</th>
-            </tr>
-            <tr class="poland">
-
-            </tr>
-            <tr class="china">
-
-            </tr>
-            <tr class="germany">
-
-            </tr>
-            <tr class="italy">
-
-            </tr>
-            <tr class="uk">
-
-            </tr>
-        </table>
+    <div class="dataForCanvas">
+        <h1 class="canvasHeader">SLUZBAZDROWIA.INFO - KORONAWIRUS COVID-19</h1>
+        <div class="row mt-5">
+            <div class="col-4">
+                <h2>ZAINFEKOWANYCH</h2>
+                <p class="infected"></p>
+            </div>
+            <div class="col-4">
+                <h2>WYLECZONYCH</h2>
+                <p class="cured"></p>
+                <p class="curedPercentage"></p>
+            </div>
+            <div class="col-4">
+                <h2>ZGONÓW</h2>
+                <p class="deaths"></p>
+                <p class="deathsPercentage"></p>
+            </div>
+        </div>
     </div>
 
-    <div class="previewImage">
-
-    </div>
+    <div class="previewImage"></div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
