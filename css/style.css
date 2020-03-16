@@ -88,8 +88,8 @@ h4 {
 .tableForCanvas {
     display: none;
     background: #1b262c;
-    width: 600px;
-    height: 314px;
+    width: 1200px;
+    height: 630px;
 }
 
 @media screen and  (min-width: 768px) and (max-width: 992px) {
