@@ -86,6 +86,7 @@ h4 {
 }
 
 .tableForCanvas {
+    display: none;
     background: #1b262c;
     width: 600px;
     height: 314px;
