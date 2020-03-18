@@ -5,16 +5,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
 
-    <meta name="twitter:card" content="summary" />
-    <meta property="og:url" content="http://sluzbazdrowia.info/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Statystyki skuteczności walki z koronawirusem - COVID-19" />
-    <meta property="og:description" content="Dane ukazują skuteczność walki z koronawirusem w Polsce i na Świecie. Dane aktualizowane na bierząco ze źródeł ESRI Polska i Johns Hopkins University" />
-    <meta property="og:image" content="http://sluzbazdrowia.info/img/pi.png" />
+    <meta name="twitter:card" content="summary"/>
+    <meta property="og:url" content="http://sluzbazdrowia.info/"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Statystyki skuteczności walki z koronawirusem - COVID-19"/>
+    <meta property="og:description"
+          content="Dane ukazują skuteczność walki z koronawirusem w Polsce i na Świecie. Dane aktualizowane na bierząco ze źródeł ESRI Polska i Johns Hopkins University"/>
+    <meta property="og:image" content="http://sluzbazdrowia.info/img/pi.png"/>
 
     <title>Służba Zdrowia - Korona Wirus</title>
 
@@ -28,7 +30,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160643537-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'UA-160643537-1');
@@ -36,99 +42,86 @@
 
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12  borderLeftWhite">
-                <h1 class="mt-3">Statystyki skuteczności walki z koronawirusem COVID-19 w Polsce i na Świecie</h1>
-            </div>
-            <div class="col-12 borderLeft createCanvas">
-                <h2 class="mt-2 borderBottom">Polska</h2>
-                    <div class="row">
-                        <div class="col-4">
-                            <div class="infected">
-                                <h3>Liczba zainfekowanych</h3>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <h3>Procent wyleczonych</h3>
-                            <div class="curedPercentage mb-2"></div>
-                            <h4>Liczba wyleczonych</h4>
-                            <div class="cured"></div>
-                        </div>
-                        <div class="col-4">
-                            <h3>Procent zgonów</h3>
-                            <div class="deathsPercentage mb-2"></div>
-                            <h4>Liczba zgonów</h4>
-                            <div class="deaths"></div>
-                        </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12  borderLeftWhite">
+            <h1 class="mt-3">Statystyki skuteczności walki z koronawirusem COVID-19 w Polsce i na Świecie</h1>
+        </div>
+        <div class="col-12 borderLeft createCanvas">
+            <h2 class="mt-2 borderBottom">Polska</h2>
+            <div class="row">
+                <div class="col-4">
+                    <div class="infected">
+                        <h3>Liczba zainfekowanych</h3>
                     </div>
-            </div>
-            <div class="col-12 borderLeft">
-                <h2>Inne kraje</h2>
-                <table id="covidTable" class="table">
-                    <thead>
-                        <tr>
-                            <th><a href="#">Kraj</a></th>
-                            <th><a href="#">Liczba zainfekowanych</a></th>
-                            <th><a href="#">Procent wyleczonych</a></th>
-                            <th><a href="#">Liczba wyleczonych</a></th>
-                            <th><a href="#">Procent zgonów</a></th>
-                            <th><a href="#">Liczba zgonów</a></th>
-                        </tr>
-                    </thead>
-                    <tbody class="otherCountries">
-
-                    </tbody>
-                </table>
-            </div>
-            <div class="borderLeft col-12">
-                <div class="col5">
-
+                </div>
+                <div class="col-4">
+                    <h3>Procent wyleczonych</h3>
+                    <div class="curedPercentage mb-2"></div>
+                    <h4>Liczba wyleczonych</h4>
+                    <div class="cured"></div>
+                </div>
+                <div class="col-4">
+                    <h3>Procent zgonów</h3>
+                    <div class="deathsPercentage mb-2"></div>
+                    <h4>Liczba zgonów</h4>
+                    <div class="deaths"></div>
                 </div>
             </div>
-            <div class="borderLeft col-12">
-                Żródła danych - <a rel="nofollow" href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">Johns Hopkins CSSE </a> | <a rel="nofollow" href="https://www.esri.pl/">ESRI Polska</a>
+        </div>
+        <div class="col-12 borderLeft">
+            <h2>Inne kraje</h2>
+            <table id="covidTable" class="table">
+                <thead>
+                <tr>
+                    <th><a href="#">Kraj</a></th>
+                    <th><a href="#">Liczba zainfekowanych</a></th>
+                    <th><a href="#">Procent wyleczonych</a></th>
+                    <th><a href="#">Liczba wyleczonych</a></th>
+                    <th><a href="#">Procent zgonów</a></th>
+                    <th><a href="#">Liczba zgonów</a></th>
+                </tr>
+                </thead>
+                <tbody class="otherCountries">
+
+                </tbody>
+            </table>
+        </div>
+        <div class="borderLeft col-12">
+            <div class="col5">
+
             </div>
         </div>
+        <div class="borderLeft col-12">
+            Żródła danych - <a rel="nofollow"
+                               href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">Johns
+            Hopkins CSSE </a> | <a rel="nofollow" href="https://www.esri.pl/">ESRI Polska</a>
+        </div>
     </div>
+</div>
 
-    <div class="col-6 modal-content p-3">
-        <p>
-            Nasza strona internetowa używa plików cookies (tzw. ciasteczka) w celach statystycznych, reklamowych oraz
-            funkcjonalnych. Dzięki nim możemy indywidualnie dostosować stronę do twoich potrzeb. Każdy może zaakceptować
-            pliki cookies albo ma możliwość wyłączenia ich w przeglądarce, dzięki czemu nie będą zbierane żadne
-            informacje
-        </p>
-        <a href="#" class="btn-sm btn-warning" onclick="setVisited()">OK</a>
-    </div>
+<div class="col-6 modal-content p-3">
+    <p>
+        Nasza strona internetowa używa plików cookies (tzw. ciasteczka) w celach statystycznych, reklamowych oraz
+        funkcjonalnych. Dzięki nim możemy indywidualnie dostosować stronę do twoich potrzeb. Każdy może zaakceptować
+        pliki cookies albo ma możliwość wyłączenia ich w przeglądarce, dzięki czemu nie będą zbierane żadne
+        informacje
+    </p>
+    <a href="#" class="btn-sm btn-warning" onclick="setVisited()">OK</a>
+</div>
 
-<!--    <div class="dataForCanvas pt-5">-->
-<!--        <div class="row mt-5">-->
-<!--            <div class="col-4 pl-5">-->
-<!--                <h2>ZAINFEKOWANYCH</h2>-->
-<!--                <p class="infected"></p>-->
-<!--            </div>-->
-<!--            <div class="col-4">-->
-<!--                <h2>WYLECZONYCH</h2>-->
-<!--                <p class="cured"></p>-->
-<!--                <p class="curedPercentage"></p>-->
-<!--            </div>-->
-<!--            <div class="col-4">-->
-<!--                <h2>ZGONÓW</h2>-->
-<!--                <p class="deaths"></p>-->
-<!--                <p class="deathsPercentage"></p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-
-<!--    <div class="previewImage"></div>-->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js" type="text/javascript"></script>
-    <script src="js/app.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"
+        type="text/javascript"></script>
+<script src="js/app.js"></script>
 
 
 </body>

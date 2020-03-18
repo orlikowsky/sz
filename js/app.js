@@ -58,7 +58,9 @@ function appendPolishData(covidPolishData) {
     $('.cured').append(cured);
     $('.curedPercentage').append(curedPercentage+ ' %');
 
-    createCanvas();
+    if(window.location.pathname === '/sz/canvas.html') {
+        createCanvas();
+    }
 }
 
 function setCookiePolish(covidData) {
@@ -96,18 +98,14 @@ function createCanvas() {
 
     html2canvas(element, {
         onrendered: function (canvas) {
-            var dataUrl = canvas.toDataURL("image/png");
-            console.log(dataUrl);
-            var img =
             $(".previewImage").append(canvas);
-            getCanvas = canvas;
         }
     });
-
-
 }
 
-new Tablesort(document.getElementById('covidTable'));
+if(window.location.pathname !== '/sz/canvas.html') {
+    new Tablesort(document.getElementById('covidTable'));
+}
 
 $(document).ready(function () {
     checkVisited();
