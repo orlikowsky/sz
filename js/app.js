@@ -103,7 +103,7 @@ function createCanvas() {
     });
 }
 
-if(window.location.pathname !== '/sz/canvas.html') {
+if(window.location.pathname !== '/canvas.html') {
     new Tablesort(document.getElementById('covidTable'));
 }
 
