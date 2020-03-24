@@ -39,22 +39,6 @@ function appendData(covidData) {
     });
 }
 
-function setCookiePolish(covidData) {
-    var date = new Date();
-    var minutes = 10;
-    date.setTime(date.getTime() + (minutes * 60 * 1000));
-
-    $.cookie('arcgisPolishData', JSON.stringify(covidData), {expires: date});
-}
-
-function checkCookie(cookieName = 'arcgisData') {
-    if($.cookie(cookieName) === undefined) {
-        return false;
-    }
-
-    return JSON.parse($.cookie(cookieName));
-}
-
 function checkVisited() {
     var cookie = $.cookie('visited');
 
