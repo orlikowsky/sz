@@ -52,17 +52,6 @@ var setVisited = function () {
     $('.modal-content').hide();
 }
 
-function createCanvas() {
-    var element = $('.dataForCanvas'); // global variable
-    var getCanvas; // global variable
-
-    html2canvas(element, {
-        onrendered: function (canvas) {
-            $(".previewImage").append(canvas);
-        }
-    });
-}
-
 if(window.location.pathname !== '/canvas.html') {
     new Tablesort(document.getElementById('covidTable'));
 }
